@@ -1,0 +1,7 @@
+services:
+  flask-api:
+    platform: "linux/amd64"
+    build: .
+    container_name: flask-api
+    ports:
+      - "5001:5001"
