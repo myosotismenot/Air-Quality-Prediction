@@ -10,7 +10,7 @@ params = {
 	"end_date": "2025-03-31" # end date to edit
 }
 ```
-The `start_date` and `end_date` can be changed to fit what period of data you want to retrieve.
+The `start_date` and `end_date` can be changed to fit what period of data you want to retrieve. The maximum range the start and end date is a period of 3 months, so to get a larger range, you can either run the code multiple times with different ranges or copy/paste with a different range to run at once.
 
 `weather_aqi_eda.ipynb` contains some light EDA performed to get a brief look at data before the midterm presentation.
 
