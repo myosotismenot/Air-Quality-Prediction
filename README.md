@@ -81,10 +81,14 @@ We used a random forest model, as it was a simple model that can be utilized for
 
 ## Deployment
 
-The information related to deployment of the flask api and the shiny app can be found in the api and app directories, respectively.
+The information related to deployment of the flask api and the shiny app can be found in the [api](https://github.com/myosotismenot/Air-Quality-Prediction/tree/main/api) and [app](https://github.com/myosotismenot/Air-Quality-Prediction/tree/main/app) directories, respectively. They are both hosted on separate Google Cloud Run instances, but can also be run locally.
+
+The flask api portion uses the random forest model created in the methodology portion. There is a `model.py` file that utilizes the pickle file created from the methodology portion that contains a predict function to make a prediction. The `api.py` file contains the Flask API that listens for a user to either test that the server is running or retrieve the input data in order to make a prediction via POST.
+
+The shiny app portion contains the app portion of the project in `app.py`, which allows a user to drag via a slider the inputs for the prediction. The shiny app then calls the flask api to get the prediction, which the shiny app will then display.
 
 ## Results
 
-You can see the model in action via visiting the shiny app or utilizing the flask api, whether locally, self deployed, or the links above while they are still active.
+You can see the model in action via visiting the shiny app or utilizing the flask api, whether locally, self deployed, or the links above while they are still active. As a user, you can drag the sliders for the four predictors and press predict to get a prediction of the pm2.5 concentration. To see an image of this, you can look at the final slide of this [presentation](https://github.com/myosotismenot/Air-Quality-Prediction/blob/main/Images-slides/Tu%20Timothy%20Final%20Presentation.pdf).
 
 
