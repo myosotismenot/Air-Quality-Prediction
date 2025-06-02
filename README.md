@@ -47,17 +47,44 @@ Our data ranges from 1 April 2024 to 31 March 2025, in which we have converted t
 
 ### Correlation Plot
 
-Inline-style: 
-![alt text](https://github.com/myosotismenot/Air-Quality-Prediction/blob/main/Images-slides/Heatmap.png "Heatmap")
+We can get some ideas of the relationship between the predictors as well as the response with a correlation heatmap.
 
-interesting table
+![alt text](https://github.com/myosotismenot/Air-Quality-Prediction/blob/main/Images-slides/output.png "Heatmap")
 
-trends
+Here is a correlation plot of the numerical predictors as well as the pm2.5 concentration. From here, we can see that none of the predictors have a particularly strong correlation with the response.
+
+### trends
+
+Let's look at the overall trend over the past year of some of the variables
+
+![alt text](https://github.com/myosotismenot/Air-Quality-Prediction/blob/main/Images-slides/temp.png "Temperature")
+
+Overall relatively cool other than an increase around September. Interesting that it did not get hotter around the time of the fires.
+
+![alt text](https://github.com/myosotismenot/Air-Quality-Prediction/blob/main/Images-slides/humidity.png "Humidity")
+
+The humidity seems to vary based on the time of year, but we can see the lowest point was around the time of the fires.
+
+![alt text](https://github.com/myosotismenot/Air-Quality-Prediction/blob/main/Images-slides/cloudcover.png "Cloud Coverage")
+
+The cloud coverage had the strongest correlation with humidity. Base on the plot, it can be difficult at points though.
+
+![alt text](https://github.com/myosotismenot/Air-Quality-Prediction/blob/main/Images-slides/pm2.5.png "Response - Pm2.5 Concentration")
+
+The overall pM2.5 concentration within the past year.
 
 ## Methodology
 
+The data was retrieved via open-meteo's weather api. To see how to use it and the data, you can visit their [website](https://open-meteo.com/), as well as examine the Access-Api-and-EDA directory. To access the api, we utilizied a python notebook, and saved the data in chunks of 3 months (maximum) split for weather and data. The csv for the data can also be found in the folders as well.
+
+We used a random forest model, as it was a simple model that can be utilized for this data. The building of this model can be found in `prediction.ipynb`, which outputs a `rf_pm25_model.pkl` file that is used by the flask api app. While this file is not included in the github due to size limitations, you can run the `prediction.ipynb` if you wish to see/run it yourself.
+
 ## Deployment
 
+The information related to deployment of the flask api and the shiny app can be found in the api and app directories, respectively.
+
 ## Results
+
+You can see the model in action via visiting the shiny app or utilizing the flask api, whether locally, self deployed, or the links above while they are still active.
 
 
