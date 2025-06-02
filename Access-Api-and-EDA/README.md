@@ -15,3 +15,9 @@ The `start_date` and `end_date` can be changed to fit what period of data you wa
 `weather_aqi_eda.ipynb` contains some light EDA performed to get a brief look at data before the midterm presentation.
 
 `pre-prediction.ipynb` contains some more EDA performed before the final presentation, also used to try and create a more concrete idea for the final app.
+
+All of these files should be able to run with the Docker image contained within the dockerfile folder. To do so, make sure you have docker installed. Afterwards, go to the folder containing the docker files within terminal and run:
+
+```docker compose up -d```
+
+From there, you should be able to go to [localhost:8888](http://localhost:8888/lab) to view/edit the jupyter notebooks, as well as view the files from browser.
