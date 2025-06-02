@@ -1,3 +1,5 @@
+# Flask API
+
 This Folder contains all the files related to the flask api. The flask api can be found [here](https://rf-aqi-1099088179937.us-central1.run.app).
 
 To test whether this api is currently running, you can click the link. Alternatively you can test by utilizing the model.
@@ -19,7 +21,7 @@ Expected output:
 }
 
 ```
-
+## Contents
 Here are the files contained within this folder:
 
 - this README.md file
