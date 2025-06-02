@@ -1,1 +1,0 @@
-This folder contains backups of the data used to create the model, which was obtained from the python script for obtaining the data from open-meteo's api. These files are also available within the `Access-Api-and-EDA` folder.
