@@ -28,7 +28,27 @@ The Westwood Air Quality Prediction App is a simple app that predicts the PM2.5 
 
 ## Light EDA
 
-correlation plot
+### Summary Statistics
+
+To get a better idea of the data, here is a table of the summary statistics
+
+| Statistic | temperature_2m | precipitation | relative_humidity_2m | cloud_cover | pm2_5 |
+|-----------|----------------|---------------|-----------------------|-------------|--------|
+| **Count** | 365.000        | 365.000       | 365.000               | 365.000     | 365.000 |
+| **Mean**  | 16.579         | 0.602         | 66.773                | 37.325      | 21.580  |
+| **Std**   | 4.275          | 2.976         | 18.872                | 28.627      | 13.476  |
+| **Min**   | 8.068          | 0.000         | 7.620                 | 0.000       | 4.754   |
+| **25%**   | 13.345         | 0.000         | 60.081                | 10.250      | 13.771  |
+| **50%**   | 15.799         | 0.000         | 73.363                | 34.208      | 18.379  |
+| **75%**   | 19.885         | 0.000         | 79.439                | 60.875      | 26.404  |
+| **Max**   | 33.245         | 29.800        | 93.886                | 99.375      | 141.733 |
+
+Our data ranges from 1 April 2024 to 31 March 2025, in which we have converted the data from hourly to daily based on averages. We see there are no missing values based on the count. Some of this information is expected For example, we typically don't see to much precipitation in California, which is why up to the 75th quartile, there is still 0 mm for precipitation. Likely, the pm2.5 content is skewed, as the average and the median differ heavily, which is also similar to what we see in precipitation.
+
+### Correlation Plot
+
+Inline-style: 
+![alt text](https://github.com/myosotismenot/Air-Quality-Prediction/blob/main/Images-slides/Heatmap.png "Heatmap")
 
 interesting table
 
