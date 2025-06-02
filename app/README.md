@@ -1,6 +1,6 @@
 # Shiny App
 
-This folder contains the files related to the shiny app itself. The shiny app is hosted on google cloud run, and uses the flask api in a separate google cloud run to get the prediction from the random forest model. While it is still running, it can be found [here](https://rf-shiny-1099088179937.us-central1.run.app/).
+This folder contains the files related to the shiny app itself. The shiny app is hosted on google cloud run, and uses the flask api in a separate google cloud run to get the prediction from the random forest model. While it is still running, it can be found [here](https://rfshiny-1099088179937.us-central1.run.app/).
 
 ## Contents
 
