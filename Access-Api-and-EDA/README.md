@@ -14,6 +14,8 @@ The `start_date` and `end_date` can be changed to fit what period of data you wa
 
 `weather_aqi_eda.ipynb` contains some light EDA performed to get a brief look at data before the midterm presentation.
 
+We used a random forest model, as it was a simple model that can be utilized for this data. The building of this model can be found in `prediction.ipynb`, which outputs a `rf_pm25_model.pkl` file that is used by the flask api app. While this file is not included in the github due to size limitations, you can run the `prediction.ipynb` if you wish to see/run it yourself.
+
 All of these files should be able to run with the Docker image contained within the dockerfile folder. To do so, make sure you have docker installed. Afterwards, go to the folder containing the docker files within terminal and run:
 
 ```docker compose up -d```
